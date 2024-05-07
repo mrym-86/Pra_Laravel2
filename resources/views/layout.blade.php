@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('/public/assets/css/reset.css') }}" rel="stylesheet">
-    <link href="{{ asset('/public/assets/css/layout.css') }}" rel="stylesheet">
+    {{-- ここはpublic以下 --}}
+    <link href="{{ asset('/assets/css/reset.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/css/layout.css') }}" rel="stylesheet">
     <title>@yield('title')</title>
   </head>
 
@@ -42,7 +43,7 @@
 
       <div class="index">© Furniture Design</div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
