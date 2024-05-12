@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{-- ここはpublic以下 --}}
     <link href="{{ asset('/assets/css/reset.css') }}" rel="stylesheet">
+    @yield('css')
     <link href="{{ asset('/assets/css/layout.css') }}" rel="stylesheet">
     <title>@yield('title')</title>
   </head>
