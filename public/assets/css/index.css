@@ -1,0 +1,34 @@
+/*top*/
+#top{
+  margin-bottom:160px;
+}
+
+.content_title{
+  margin-bottom:30px;
+}
+
+.top_contents{
+  padding-top:80px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+
+.top_contents img{
+  margin-bottom:10px;
+}
+
+.top_contents p{
+  font-size:14px;
+  line-height:center;
+}
+
+.article{
+  width:23%;
+  margin-bottom:40px;
+}
+
+.view_more{
+  text-align:center;
+  font-size:14px;
+}

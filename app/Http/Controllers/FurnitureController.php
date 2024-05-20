@@ -12,6 +12,7 @@ class FurnitureController extends Controller
      */
     public function index()
     {
+        $Furniture = Furniture::all();
         return view('index');
     }
 
