@@ -12,8 +12,8 @@ class FurnitureController extends Controller
      */
     public function index()
     {
-        $Furniture = Furniture::all();
-        return view('index');
+        $furnitures = Furniture::all();
+        return view('index', compact('furnitures'));
     }
 
     public function about()
