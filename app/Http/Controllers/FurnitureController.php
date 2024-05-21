@@ -12,7 +12,9 @@ class FurnitureController extends Controller
      */
     public function index()
     {
+        // 変数名はスネークケース
         $furnitures = Furniture::all();
+        // コントローラ=>viewに変数を渡したいときはcompactを使用
         return view('index', compact('furnitures'));
     }
 

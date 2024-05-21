@@ -20,10 +20,10 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($furnitures as $furnitures)
+          @foreach($furnitures as $furniture)
             <tr>
-              <td>{{$furnitures->name}}</td>
-              <td>{{$furnitures->price}}</td>
+              <td>{{$furniture->name}}</td>
+              <td>{{$furniture->price}}</td>
             </tr>
           @endforeach
         </tbody>
