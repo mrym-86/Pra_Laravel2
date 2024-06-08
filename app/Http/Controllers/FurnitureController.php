@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Furniture;
+use App\Models\furniture;
 use Illuminate\Http\Request;
 
 class FurnitureController extends Controller
@@ -13,7 +13,7 @@ class FurnitureController extends Controller
     public function index()
     {
         // 変数名はスネークケース
-        $furnitures = Furniture::all();
+        $furnitures = furniture::all();
         // コントローラ=>viewに変数を渡したいときはcompactを使用
         return view('index', compact('furnitures'));
     }
@@ -47,7 +47,7 @@ class FurnitureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Furniture $furniture)
+    public function show(furniture $furniture)
     {
         //
     }
@@ -55,7 +55,7 @@ class FurnitureController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Furniture $furniture)
+    public function edit(furniture $furniture)
     {
         //
     }
@@ -63,7 +63,7 @@ class FurnitureController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Furniture $furniture)
+    public function update(Request $request, furniture $furniture)
     {
         //
     }
@@ -71,7 +71,7 @@ class FurnitureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Furniture $furniture)
+    public function destroy(furniture $furniture)
     {
         //
     }

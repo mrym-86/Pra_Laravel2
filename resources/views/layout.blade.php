@@ -13,7 +13,7 @@
   <body>
     <header id="header" class="wrapper">
       <div class="title_logo">
-        <a href="{{ route('Furniture.index')}}">Furniture Design</a>
+        <a href="{{ route('furniture.index')}}">furniture Design</a>
       </div>
 
       <div class="menu">
@@ -21,9 +21,9 @@
       </div>
         <!-- ハンバーガー内menu -->
         <nav>
-          <a href="{{ route('Furniture.index')}}"> PRODUCTS</a>
-          <a href="{{ route('Furniture.about')}}">ABOUT</a>
-          <a href="{{ route('Furniture.company')}}">COMPANY</a>
+          <a href="{{ route('furniture.index')}}"> PRODUCTS</a>
+          <a href="{{ route('furniture.about')}}">ABOUT</a>
+          <a href="{{ route('furniture.company')}}">COMPANY</a>
           <a href="mailto:address">CONTACT</a>
         </nav>
     </header>
@@ -42,7 +42,7 @@
         </ul>
       </div>
 
-      <div class="index">© Furniture Design</div>
+      <div class="index">© furniture Design</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>

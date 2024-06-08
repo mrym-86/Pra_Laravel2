@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Furniture','App\Http\Controllers\FurnitureController@index')->name('Furniture.index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/Furniture/About','App\Http\Controllers\FurnitureController@about')->name('Furniture.about');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/Furniture/Company','App\Http\Controllers\FurnitureController@company')->name('Furniture.company');
+Route::get('/furniture','App\Http\Controllers\FurnitureController@index')->name('furniture.index');
 
+Route::get('/furniture/About','App\Http\Controllers\FurnitureController@about')->name('furniture.about');
 
+Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
+
+require __DIR__.'/auth.php';
