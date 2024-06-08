@@ -28,10 +28,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/Furniture','App\Http\Controllers\FurnitureController@index')->name('Furniture.index');
+Route::get('/furniture','App\Http\Controllers\FurnitureController@index')->name('furniture.index');
 
-Route::get('/Furniture/About','App\Http\Controllers\FurnitureController@about')->name('Furniture.about');
+Route::get('/furniture/About','App\Http\Controllers\FurnitureController@about')->name('furniture.about');
 
-Route::get('/Furniture/Company','App\Http\Controllers\FurnitureController@company')->name('Furniture.company');
+Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
 
 require __DIR__.'/auth.php';

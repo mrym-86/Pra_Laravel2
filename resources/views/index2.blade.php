@@ -11,7 +11,7 @@
 @section('contents')
 <main id="top" class="wrapper">
     <div class="top_contents">
-      @foreach($Furniture as $furniture)
+      @foreach($furniture as $furniture)
         <div class="article">
           <a href="#">
             <img src="..\img\item1.jpg">
