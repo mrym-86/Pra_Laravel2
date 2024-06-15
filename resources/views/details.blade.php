@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('css')
+<link href="{{ asset('/assets/css/details.css') }}" rel="stylesheet">
+@endsection
+
 @section('title')
   アイテム名
 @endsection

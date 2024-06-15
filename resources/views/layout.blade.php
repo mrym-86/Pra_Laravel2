@@ -24,7 +24,7 @@
           <a href="{{ route('furniture.index')}}"> PRODUCTS</a>
           <a href="{{ route('furniture.about')}}">ABOUT</a>
           <a href="{{ route('furniture.company')}}">COMPANY</a>
-          <a href="mailto:address">CONTACT</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeumVBPJNY9AE_IB7rnfCIraHnT9MJJpFi4p_JTun8bywYr0Q/viewform?usp=sf_link">CONTACT</a>
         </nav>
     </header>
 

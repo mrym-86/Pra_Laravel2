@@ -18,36 +18,51 @@ class FurnituresSeeder extends Seeder
                 'name'=>'item_1',
                 'price'=>'50000',
                 'details'=>'黒い椅子です。',
-                'file_name'=>'item1.jpg',
-                'file_path'=>'resources/image'
+                'image'=>'item1.jpg',
+                'image_path'=>'images/item1.jpg',
+                'size'=>'50 × 60',
+                'color'=>'Black',
+                'material'=>'Wood'
             ],
             [
                 'name'=>'item_2',
                 'price'=>'100000',
                 'details'=>'黒のソファーです。',
-                'file_name'=>'item2.jpg',
-                'file_path'=>'resources/image'
+                'image'=>'item2.jpg',
+                'image_path'=>'images/item2.jpg',
+                'size'=>'100 × 80',
+                'color'=>'Black',
+                'material'=>'Leather'
             ],
             [
                 'name'=>'item_3',
                 'price'=>'50000',
                 'details'=>'木でできたテーブルです。',
-                'file_name'=>'item3.jpg',
-                'file_path'=>'resources/image'
+                'image'=>'item3.jpg',
+                'image_path'=>'images/item3.jpg',
+                'size'=>'70 × 80',
+                'color'=>'Ivory',
+                'material'=>'Wood'
             ],
             [
                 'name'=>'item_4',
-                'price'=>'20000',
+                'price'=>'25000',
                 'details'=>'間接照明です。',
-                'file_name'=>'item4.jpg',
-                'file_path'=>'resources/image'
+                'image'=>'item4.jpg',
+                'image_path'=>'images/item4.jpg',
+                'size'=>'20 × 100',
+                'color'=>'Gray',
+                'material'=>'Metal'
             ],
             [
                 'name'=>'item_5',
-                'price'=>'100000',
-                'details'=>'茶色のソファーです。',
-                'file_name'=>'item5.jpg',
-                'file_path'=>'resources/image'
+                'price'=>'60000',
+                'details'=>'3人掛けのソファです。',
+                'image'=>'item5.jpg',
+                'image_path'=>'images/item5.jpg',
+                'size'=>'250 × 80',
+                'color'=>'LightBrown',
+                'material'=>'Leather'
             ]
 
             ]);
