@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-  家具通販サイト
+  通販サイト
 @endsection
 
 @section('contents')
