@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login',function(){
+    return view('auth.custom_login');
+})->name('login');
+
+Route::post('/login',[AuthenticatedSessionController::class,'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

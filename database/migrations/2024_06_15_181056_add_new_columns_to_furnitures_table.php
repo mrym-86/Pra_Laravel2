@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('furnitures', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->integer('price');
-            $table->text('details');
-            $table->timestamps();
+        Schema::table('furnitures', function (Blueprint $table) {
+            //
+            $table->string('image_path'); //画像格納先
         });
     }
 
@@ -25,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('furnitures');
+        Schema::table('furnitures', function (Blueprint $table) {
+            //
+            $table->dropColumn('image_path');
+        });
     }
 };

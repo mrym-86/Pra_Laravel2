@@ -12,21 +12,13 @@
 <main id="top" class="wrapper">
     <div class="top_contents">
       <table>
-        <thead>
-          <tr>
-            <th>画像</th>
-            <th>商品名</th>
-            <th>価格</th>
-          </tr>
-        </thead>
-        <tbody>
           @foreach($furnitures as $furniture)
             <tr>
+              <td><img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}"></td>
               <td>{{$furniture->name}}</td>
               <td>{{$furniture->price}}</td>
             </tr>
           @endforeach
-        </tbody>
       </table>
     </div>
     @endsection

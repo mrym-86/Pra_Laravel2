@@ -9,6 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Illuminate\Validation\ValidationException;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -17,7 +18,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.login');
+        return view('auth.custom_login');
     }
 
     /**
@@ -27,13 +28,13 @@ class AuthenticatedSessionController extends Controller
     {
         /**$request->authenticate();'**/
         $request->validate([
-            'email' => 'required|string|email',
-            'password' =>'required|string',
+            'email' => ['required','string','email'],
+            'password' =>['required','string'],
         ]);
 
-        if(!Auth::attempt($request->only('email','password'),$request->boolean('remember'))){
-            return redirect()->back()->withErrors(['login_error' => 'ログインに失敗しました。もう一度試してください。']);
-        }
+        /**if(!Auth::attempt($request->only('email','password'), $request->boolean('remember'))){
+            throw ValidationException::withMessages(['login_error' => 'ログインに失敗しました。もう一度試してください。']);
+        }**/
 
 
         $request->session()->regenerate();
