@@ -21,5 +21,6 @@
           @endforeach
       </table>
     </div>
-    @endsection
+    <a class="btn" href="{{ route('furniture.Item_Registration')}}">新規登録</a>
 </main>
+@endsection
