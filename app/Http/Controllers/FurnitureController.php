@@ -28,12 +28,15 @@ class FurnitureController extends Controller
         return view('company');
     }
 
+
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function Item_Registration()
     {
         //
+        return view('Item_Registration');
+
     }
 
     /**
