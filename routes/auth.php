@@ -56,4 +56,13 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+    // 転記
+    Route::get('/furniture','App\Http\Controllers\FurnitureController@index')->name('furniture.index');
+
+    Route::get('/furniture/About','App\Http\Controllers\FurnitureController@about')->name('furniture.about');
+
+    Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
+
+    Route::get('/furniture/Item_Registration','App\Http\Controllers\FurnitureController@Item_Registration')->name('furniture.Item_Registration');
 });

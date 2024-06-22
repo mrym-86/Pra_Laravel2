@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width-initial-scale=1.0">
   <link href="{{ asset('/assets/css/login.css') }}" rel="stylesheet">
+  {{-- <link href="{{ asset('/assets/css/index.css') }}" rel="stylesheet"> --}}
       <title>ログイン画面</title>
 </head>
 
@@ -18,11 +19,10 @@
     </div>
     <div class="form-group">
       <label for="password" value="___('Password')">パスワード</label>
-      <input type="password" name="password" id="password" value="{{ old('password')}}" required> 
+      <input type="password" name="password" id="password" value="{{ old('password')}}" required>
     </div>
     <button type="submit">{{ __('ログイン') }}</button>
   </form>
 </div>
 </body>
 
-  

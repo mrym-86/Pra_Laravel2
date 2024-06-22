@@ -2,6 +2,7 @@
 
 @section('css')
 <link href="{{ asset('/assets/css/item_registration.css') }}" rel="stylesheet">
+<link href="{{ asset('/assets/css/index.css') }}" rel="stylesheet">
 @endsection
 
 @section('title')
@@ -11,7 +12,7 @@
 @section('contents')
 <main id="item_registration" class="wrapper">
   <h1>新規登録画面</h1>
-    
+
       <div class="top_contents">
         <table>
           <tr>
@@ -25,6 +26,6 @@
         </table>
       </div>
       <button type="submit">新規登録</button>
-    
+
 </main>
 @endsection
