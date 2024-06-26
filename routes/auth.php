@@ -64,5 +64,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
 
-    Route::get('/furniture/Item_Registration','App\Http\Controllers\FurnitureController@Item_Registration')->name('furniture.Item_Registration');
+    Route::get('/furniture/create','App\Http\Controllers\FurnitureController@create')->name('furniture.create');
+
+    Route::get('/furniture/edit','App\Http\Controllers\FurnitureController@edit')->name('furniture.edit');
+
+    Route::get('/furniture/details','App\Http\Controllers\FurnitureController@details')->name('furniture.details');
 });
