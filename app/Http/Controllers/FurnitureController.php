@@ -32,10 +32,10 @@ class FurnitureController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function Item_Registration()
+    public function create()
     {
         //
-        return view('Item_Registration');
+        return view('create');
 
     }
 
@@ -61,6 +61,7 @@ class FurnitureController extends Controller
     public function edit(furniture $furniture)
     {
         //
+        return view('edit');
     }
 
     /**

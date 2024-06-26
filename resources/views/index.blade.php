@@ -14,13 +14,14 @@
       <table>
           @foreach($furnitures as $furniture)
             <tr>
-              <td><img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}"></td>
+              <td><a href ="{{ asset('/resources/views/details.blade.php') }}"><img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}"></a></td>
               <td>{{$furniture->name}}</td>
               <td>{{$furniture->price}}</td>
             </tr>
           @endforeach
       </table>
     </div>
-    <a class="btn" href="{{ route('furniture.Item_Registration')}}">新規登録</a>
+    <a class="btn" href="{{ route('furniture.create')}}">新規登録</a>
+    <a class="btn" href="{{ route('furniture.edit')}}">内容変更</a>
 </main>
 @endsection
