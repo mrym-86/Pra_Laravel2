@@ -28,6 +28,11 @@ class FurnitureController extends Controller
         return view('company');
     }
 
+    public function details()
+    {
+        return view('details');
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -52,7 +57,8 @@ class FurnitureController extends Controller
      */
     public function show(furniture $furniture)
     {
-        //
+        $furniture = Furniture::firstOrFail($id);
+        return view('details',compact('furniture'));
     }
 
     /**

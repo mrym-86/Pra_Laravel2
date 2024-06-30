@@ -34,6 +34,13 @@ img{
     right:0;
     z-index: 10;
 }
+.header_menu ul{
+  display:flex;
+}
+
+.header_menu li{
+  margin-left:15px;
+}
 
 .title_logo{
   font-size:28px;

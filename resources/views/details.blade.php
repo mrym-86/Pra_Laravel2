@@ -1,19 +1,21 @@
-@extends('layout')
+p@extends('layout')
 
 @section('css')
 <link href="{{ asset('/assets/css/details.css') }}" rel="stylesheet">
 @endsection
 
 @section('title')
-  アイテム名
+  商品詳細
 @endsection
 
 @section('contents')
-  ・アイテム写真
-  ・コメント
-  ・値段
-  ・サイズ
-  ・色
-  ・素材
-  記載予定
+  <main id="details" class="wrapper">
+    <h1>商品詳細</h1>
+    <p>・アイテム写真：<img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}"</p>
+    <p>・コメント:{{$furniture->details }}</p>
+  
+  <p>・値段</p>
+  <p>・サイズ</p>
+  <p>・色</p>
+  <p>・素材</p>
 @endsection
