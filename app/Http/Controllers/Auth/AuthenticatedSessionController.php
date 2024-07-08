@@ -18,7 +18,10 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.custom_login');
+        // return view('auth.custom_login');
+
+        // MEMO: これはbreeze標準のviewファイルに変えてます！
+        return view('auth.login');
     }
 
     /**
@@ -26,15 +29,14 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        /**$request->authenticate();'**/
-        $request->validate([
-            'email' => 'required | string | email ',
-            'password' => 'required | string | max:50' ,
-        ]);
+        // MEMO: ここで認証してる
+        $request->authenticate();
 
-        /*if(!Auth::attempt($request->only('email','password'), $request->boolean('remember'))){
+        // dd('authenticate通ってる');
+
+        if(!Auth::attempt($request->only('email','password'), $request->boolean('remember'))){
             throw ValidationException::withMessages(['login_error' => 'ログインに失敗しました。もう一度試してください。']);
-        }*/
+        }
 
         $request->session()->regenerate();
 
