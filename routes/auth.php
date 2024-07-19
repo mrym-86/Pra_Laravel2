@@ -54,13 +54,17 @@ Route::middleware('auth')->group(function () {
 
     Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
-    Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->name('logout');
+    //★POST→GETへ変更するのは問題ない？
+    /*Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+                ->name('logout');*/
+
+    Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->name('logout');
 
     // 転記
     Route::get('/furniture','App\Http\Controllers\FurnitureController@index')->name('furniture.index');
 
-    Route::get('/furniture/About','App\Http\Controllers\FurnitureController@about')->name('furniture.about');
+    Route::get('/furniture/About','app\Http\Controllers\FurnitureController@about')->name('furniture.about');
 
     Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
 

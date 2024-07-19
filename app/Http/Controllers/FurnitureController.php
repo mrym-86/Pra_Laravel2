@@ -20,7 +20,11 @@ class FurnitureController extends Controller
 
     public function about()
     {
+        
         return view('about');
+        //return view('about');
+
+        dd('about確認');
     }
 
     public function company()
@@ -57,7 +61,9 @@ class FurnitureController extends Controller
      */
     public function show(furniture $furniture)
     {
-        $furniture = Furniture::firstOrFail($id);
+        dd('authenticate通ってる');
+        $furniture = Furniture::find($id);
+        
         return view('details',compact('furniture'));
     }
 

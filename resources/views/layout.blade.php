@@ -31,7 +31,9 @@
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeumVBPJNY9AE_IB7rnfCIraHnT9MJJpFi4p_JTun8bywYr0Q/viewform?usp=sf_link">CONTACT</a></li>
             <li>
               <div class="logout_btn">
-                <input type="submit" value="ログアウト">
+                <a href="{{ route('logout')}}">
+                  <input type="submit" value="ログアウト">
+                </a>
               </div>
             </li>
           </ul>

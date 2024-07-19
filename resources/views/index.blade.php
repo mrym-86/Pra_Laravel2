@@ -16,24 +16,14 @@
       <div class="grid_container">
         @foreach($furnitures as $furniture)
           <div class="grid_item">
-            <a href ="{{ route('furniture.details',['id' =>$furniture->id])}}">
+            <a href ="{{ route('furniture.details',[$furniture->id])}}">
               <img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}">
-            </a>
+              </a>
+            
             <p>NAME:{{$furniture->name}}</p>
             <p>PRICE:{{$furniture->price}}</p>
           </div>
         @endforeach
-      <!--
-        <table>
-            @foreach($furnitures as $furniture)
-              <tr>
-                <td><a href ="{{ route('furniture.details')}}"><img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}"></a></td>
-                <td>{{$furniture->name}}</td>
-                <td>{{$furniture->price}}</td>
-              </tr>
-            @endforeach
-        </table>
-      -->
       </div>
     </div>
 
