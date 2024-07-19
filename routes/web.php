@@ -44,6 +44,5 @@ Route::middleware('auth')->group(function () {
 // Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
 
 // Route::get('/furniture/Item_Registration','App\Http\Controllers\FurnitureController@Item_Registration')->name('furniture.Item_Registration');
-Route::resource('furniture', FurnitureController::class);
 
 require __DIR__.'/auth.php';

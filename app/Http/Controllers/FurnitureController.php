@@ -13,6 +13,7 @@ class FurnitureController extends Controller
     public function index()
     {
         // 変数名はスネークケース
+        // dd('indexは飛んでる');
         $furnitures = furniture::all();
         // コントローラ=>viewに変数を渡したいときはcompactを使用
         return view('index', compact('furnitures'));
@@ -20,11 +21,11 @@ class FurnitureController extends Controller
 
     public function about()
     {
-        
+        // dd('about確認');
+
         return view('about');
         //return view('about');
 
-        dd('about確認');
     }
 
     public function company()
@@ -32,10 +33,11 @@ class FurnitureController extends Controller
         return view('company');
     }
 
-    public function details()
-    {
-        return view('details');
-    }
+    // MEMO: detailsはコメントアウト
+    // public function details()
+    // {
+    //     return view('details');
+    // }
 
 
     /**
@@ -59,11 +61,12 @@ class FurnitureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(furniture $furniture)
+    public function show($id)
     {
-        dd('authenticate通ってる');
+        // dd($id);
+        // dd('authenticate通ってる');
         $furniture = Furniture::find($id);
-        
+
         return view('details',compact('furniture'));
     }
 

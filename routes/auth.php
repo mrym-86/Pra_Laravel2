@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\FurnitureController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -62,16 +63,16 @@ Route::middleware('auth')->group(function () {
     ->name('logout');
 
     // 転記
-    Route::get('/furniture','App\Http\Controllers\FurnitureController@index')->name('furniture.index');
+    Route::get('/furniture',[FurnitureController::class, 'index'])->name('furniture.index');
 
-    Route::get('/furniture/About','app\Http\Controllers\FurnitureController@about')->name('furniture.about');
+    Route::get('/furniture/about',[FurnitureController::class, 'about'])->name('furniture.about');
 
-    Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
+    Route::get('/furniture/company',[FurnitureController::class, 'company'])->name('furniture.company');
 
-    Route::get('/furniture/create','App\Http\Controllers\FurnitureController@create')->name('furniture.create');
+    Route::get('/furniture/create',[FurnitureController::class, 'create'])->name('furniture.create');
 
-    Route::get('/furniture/edit','App\Http\Controllers\FurnitureController@edit')->name('furniture.edit');
+    Route::get('/furniture/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
 
-    /*Route::get('/furniture/details','App\Http\Controllers\FurnitureController@details')->name('furniture.details');*/
-    Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.details');
+    // Route::get('/furniture/details',[FurnitureController::class, 'details'])->name('furniture.details');
+    Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.show');
 });

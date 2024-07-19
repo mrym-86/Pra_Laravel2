@@ -16,10 +16,10 @@
       <div class="grid_container">
         @foreach($furnitures as $furniture)
           <div class="grid_item">
-            <a href ="{{ route('furniture.details',[$furniture->id])}}">
+            <a href ="{{ route('furniture.show',[$furniture->id])}}">
               <img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}">
               </a>
-            
+
             <p>NAME:{{$furniture->name}}</p>
             <p>PRICE:{{$furniture->price}}</p>
           </div>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-      
+
 
 </main>
 @endsection
