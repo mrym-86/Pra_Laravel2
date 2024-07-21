@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\FurnitureController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FurnitureController;
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
@@ -73,6 +74,5 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/furniture/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
 
-    // Route::get('/furniture/details',[FurnitureController::class, 'details'])->name('furniture.details');
     Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.show');
 });

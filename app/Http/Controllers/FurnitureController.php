@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\furniture;
 use Illuminate\Http\Request;
 
@@ -33,12 +34,6 @@ class FurnitureController extends Controller
         return view('company');
     }
 
-    // MEMO: detailsはコメントアウト
-    // public function details()
-    // {
-    //     return view('details');
-    // }
-
 
     /**
      * Show the form for creating a new resource.
@@ -63,8 +58,6 @@ class FurnitureController extends Controller
      */
     public function show($id)
     {
-        // dd($id);
-        // dd('authenticate通ってる');
         $furniture = Furniture::find($id);
 
         return view('details',compact('furniture'));
