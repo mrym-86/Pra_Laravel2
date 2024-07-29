@@ -10,29 +10,33 @@
 
 <body>
   <div class ="login-container">
-  <h1>ログイン</h1>
-  <form method="POST" action="{{ route('login') }}">
-    @csrf
-    <div class="form-group">
-      <label for="email" value="___('Email')">メールアドレス</label>
-      @error('email')
-      <span style="color:red">入力内容が正しくありません</span>
-      @enderror
-      <input type="email" name="email" id="email" value="{{ old('email')}}" required> 
+    <div class="container">
+      <h1>ログイン</h1>
+      <form method="POST" action="{{ route('login') }}">
+        @csrf
+        <div class="form-group">
+          <label for="email" value="___('Email')">メールアドレス</label>
+          @error('email')
+          <span style="color:red">入力内容が正しくありません</span>
+          @enderror
+          <input type="email" name="email" id="email" value="{{ old('email')}}" required> 
+        </div>
+        <div class="form-group">
+          @error('password')
+          <span style="color:red">入力内容が正しくありません</span>
+          @enderror
+          <label for="password" value="___('Password')">パスワード</label>
+          <input type="password" name="password" id="password" value="{{ old('password')}}" required>
+        </div>
+        <div class="form-group">
+          <label for="checkbox" value="___('Checkbox')">あなたは管理者ですか？</label>
+          <input type="checkbox" name="management" id="management" value="はい" required>
+        </div>
+        <div class="login-button">
+          <button type="submit">{{ __('ログイン') }}</button>
+        </div>
+      </form>
     </div>
-    <div class="form-group">
-      @error('password')
-      <span style="color:red">入力内容が正しくありません</span>
-      @enderror
-      <label for="password" value="___('Password')">パスワード</label>
-      <input type="password" name="password" id="password" value="{{ old('password')}}" required>
-    </div>
-    <div class="form-group">
-      <label for="checkbox" value="___('Checkbox')">あなたは管理者ですか？</label>
-      <input type="checkbox" name="management" id="management" value="はい" required>
-    </div>
-    <button type="submit">{{ __('ログイン') }}</button>
-  </form>
-</div>
+  </div>
 </body>
 
