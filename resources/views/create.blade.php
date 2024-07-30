@@ -2,7 +2,6 @@
 
 @section('css')
 <link href="{{ asset('/assets/css/create.css') }}" rel="stylesheet">
-<link href="{{ asset('/assets/css/index.css') }}" rel="stylesheet">
 @endsection
 
 @section('title')
@@ -51,10 +50,10 @@
             <td>素材</td>
             <td><input type="text"></td>
           </tr>
-
         </table>
       </div>
-      <button type="submit">新規登録</button>
-
+      <div class="create_btn">
+        <button type="submit">新規登録</button>
+      </div>
 </main>
 @endsection

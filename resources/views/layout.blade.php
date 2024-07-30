@@ -16,12 +16,6 @@
         <a href="{{ route('furniture.index')}}">furniture Design</a>
       </div>
 
-      <!--<div class="header_menu_btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>-->
-
       <div class="header_menu">
         <nav id="menu_nav">
           <ul>
@@ -32,7 +26,7 @@
             <li>
               <div class="logout_btn">
                 <a href="{{ route('logout')}}">
-                  <input type="submit" value="ログアウト">
+                  ログアウト
                 </a>
               </div>
             </li>
