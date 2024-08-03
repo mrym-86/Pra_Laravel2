@@ -14,7 +14,6 @@
   <h1>商品編集画面</h1>
       @csrf
       <div class="top_contents">
-      <form method="POST" action="{{ route('edit') }}">
         <table>
           <tr>
             <th>項目名</th>

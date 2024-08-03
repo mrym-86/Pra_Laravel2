@@ -16,6 +16,13 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!-- Are you an Administer? -->
+        <div class ="mt-4">
+            <label class="form-check-label" for="admin">あなたは管理者ですか？</label>
+            <input type="hidden" class="form-check-input" name="admin" id="admin" value="0">
+            <input type="checkbox" class="form-check-input" name="admin" id="admin" value="1">
+        </div>
+
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
