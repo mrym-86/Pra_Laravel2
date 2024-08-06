@@ -16,12 +16,6 @@
         <a href="{{ route('furniture.index')}}">furniture Design</a>
       </div>
 
-      <!--<div class="header_menu_btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>-->
-
       <div class="header_menu">
         <nav id="menu_nav">
           <ul>
@@ -31,7 +25,9 @@
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeumVBPJNY9AE_IB7rnfCIraHnT9MJJpFi4p_JTun8bywYr0Q/viewform?usp=sf_link">CONTACT</a></li>
             <li>
               <div class="logout_btn">
-                <input type="submit" value="ログアウト">
+                <a href="{{ route('logout')}}">
+                  ログアウト
+                </a>
               </div>
             </li>
           </ul>

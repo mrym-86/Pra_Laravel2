@@ -9,7 +9,9 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\FurnitureController;
 use Illuminate\Support\Facades\Route;
+/*use App\Http\Controllers\FurnitureController;*/
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
@@ -54,20 +56,23 @@ Route::middleware('auth')->group(function () {
 
     Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
-    Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->name('logout');
+    //★POST→GETへ変更するのは問題ない？
+    /*Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+                ->name('logout');*/
+
+    Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->name('logout');
 
     // 転記
-    Route::get('/furniture','App\Http\Controllers\FurnitureController@index')->name('furniture.index');
+    Route::get('/furniture',[FurnitureController::class, 'index'])->name('furniture.index');
 
-    Route::get('/furniture/About','App\Http\Controllers\FurnitureController@about')->name('furniture.about');
+    Route::get('/furniture/about',[FurnitureController::class, 'about'])->name('furniture.about');
 
-    Route::get('/furniture/Company','App\Http\Controllers\FurnitureController@company')->name('furniture.company');
+    Route::get('/furniture/company',[FurnitureController::class, 'company'])->name('furniture.company');
 
-    Route::get('/furniture/create','App\Http\Controllers\FurnitureController@create')->name('furniture.create');
+    Route::get('/furniture/create',[FurnitureController::class, 'create'])->name('furniture.create');
 
-    Route::get('/furniture/edit','App\Http\Controllers\FurnitureController@edit')->name('furniture.edit');
+    Route::get('/furniture/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
 
-    /*Route::get('/furniture/details','App\Http\Controllers\FurnitureController@details')->name('furniture.details');*/
-    Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.details');
+    Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.show');
 });

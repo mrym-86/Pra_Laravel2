@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\furniture;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class FurnitureController extends Controller
     public function index()
     {
         // 変数名はスネークケース
+        // dd('indexは飛んでる');
         $furnitures = furniture::all();
         // コントローラ=>viewに変数を渡したいときはcompactを使用
         return view('index', compact('furnitures'));
@@ -20,17 +22,16 @@ class FurnitureController extends Controller
 
     public function about()
     {
+        // dd('about確認');
+
         return view('about');
+        //return view('about');
+
     }
 
     public function company()
     {
         return view('company');
-    }
-
-    public function details()
-    {
-        return view('details');
     }
 
 
@@ -55,9 +56,10 @@ class FurnitureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(furniture $furniture)
+    public function show($id)
     {
-        $furniture = Furniture::firstOrFail($id);
+        $furniture = Furniture::find($id);
+
         return view('details',compact('furniture'));
     }
 

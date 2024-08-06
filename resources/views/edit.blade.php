@@ -2,7 +2,7 @@
 
 @section('css')
 <link href="{{ asset('/assets/css/edit.css') }}" rel="stylesheet">
-<link href="{{ asset('/assets/css/index.css') }}" rel="stylesheet">
+
 @endsection
 
 @section('title')
@@ -10,9 +10,9 @@
 @endsection
 
 @section('contents')
-<main id="create" class="wrapper">
+<main id="edit" class="wrapper">
   <h1>商品編集画面</h1>
-
+      @csrf
       <div class="top_contents">
         <table>
           <tr>

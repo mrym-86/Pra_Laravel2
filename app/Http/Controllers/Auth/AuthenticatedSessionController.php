@@ -29,12 +29,12 @@ class AuthenticatedSessionController extends Controller
         /**$request->authenticate();'**/
         $request->validate([
             'email' => 'required | string | email ',
-            'password' => 'required | string | max:50' ,
+            'password' => 'required | max:50' ,
         ]);
 
-        /*if(!Auth::attempt($request->only('email','password'), $request->boolean('remember'))){
-            throw ValidationException::withMessages(['login_error' => 'ログインに失敗しました。もう一度試してください。']);
-        }*/
+        
+
+        $request->authenticate();
 
         $request->session()->regenerate();
 

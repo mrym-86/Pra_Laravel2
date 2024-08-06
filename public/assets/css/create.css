@@ -4,5 +4,20 @@
 
 h1{
   font-size:30px;
-  color:blue;
 }
+
+.top_contents{
+  margin-top:40px;
+}
+
+.top_contents td{
+  padding-right:30px;
+  padding-top:20px;
+}
+
+
+.create_btn{
+  margin-top:30px;
+  margin-bottom:80px;
+}
+
