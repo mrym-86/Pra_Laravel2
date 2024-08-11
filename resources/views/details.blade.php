@@ -41,12 +41,24 @@
           </table>
         </div>
         <div class="button">
-          <div class="edit-button">
-            <a href="{{ route('furniture.edit')}}">編集</a>
-          </div>
-          <div class="delete-button">
-            <a href="{{ route('furniture.index')}}">削除</a>
-          </div>
+          @if(Auth::user()-> admin == 1)
+            <div class="edit-button">
+              <a href="{{ route('furniture.edit')}}">編集</a>
+            </div>
+            
+            <div class="delete-button">
+              <form action="{{route('furniture.destroy',[$furniture->id])}}" method="POST" onsubmit="return confirm('本当に削除しますか？');">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">削除</button>
+              </form>
+            </div>            
+              <!--<div class="delete-button">
+                <a href="{{ route('furniture.destroy',[$furniture->id])}}">削除</a>
+              </div>
+              -->
+            
+          @endif
           <div class="return-button">
             <a href="{{ route('furniture.index')}}">戻る</a>
           </div>

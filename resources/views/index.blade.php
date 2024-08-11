@@ -11,7 +11,9 @@
 @section('contents')
 <main id="top" class="wrapper">
     <div class="top_contents">
-      <a class="create_btn" href="{{ route('furniture.create')}}">新規登録</a>
+      @if(Auth::user()->admin == 1)
+        <a class="create_btn" href="{{ route('furniture.create')}}">新規登録</a>
+      @endif
 
       <div class="grid_container">
         @foreach($furnitures as $furniture)

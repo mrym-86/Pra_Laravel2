@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
 
 // Route::get('/furniture/Item_Registration','App\Http\Controllers\FurnitureController@Item_Registration')->name('furniture.Item_Registration');
 /*resource→indexとかの7個セットのこと、これまとめて書いておけばOKみたいなやつ*/
-/*Route::resource('furniture', FurnitureController::class);*/
+Route::resource('furniture', FurnitureController::class);
 
 /*一緒に読み込むよって意味*/
 require __DIR__.'/auth.php';
