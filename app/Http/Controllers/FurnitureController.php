@@ -83,8 +83,13 @@ class FurnitureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(furniture $furniture)
+    public function destroy($id)
     {
         //
+        $furniture = Furniture::find($id);
+
+        $furniture->delete();
+
+        return redirect()->route('furniture.index');
     }
 }

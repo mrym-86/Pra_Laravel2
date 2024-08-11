@@ -75,4 +75,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/furniture/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
 
     Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.show');
+
+    Route::post('/furniture/{id}',[FurnitureController::class,'destroy'])->name('furniture.destroy');
 });
