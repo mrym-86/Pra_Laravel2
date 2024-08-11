@@ -20,7 +20,7 @@
           <div class="grid_item">
             <a href ="{{ route('furniture.show',[$furniture->id])}}">
               <img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}">
-              </a>
+            </a>
 
             <p>NAME:{{$furniture->name}}</p>
             <p>PRICE:{{$furniture->price}}</p>

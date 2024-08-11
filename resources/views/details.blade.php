@@ -56,8 +56,7 @@
               <!--<div class="delete-button">
                 <a href="{{ route('furniture.destroy',[$furniture->id])}}">削除</a>
               </div>
-              -->
-            
+              --> 
           @endif
           <div class="return-button">
             <a href="{{ route('furniture.index')}}">戻る</a>
