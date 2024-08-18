@@ -12,7 +12,7 @@
   <main id="details" class="wrapper">
     <div class="contents">  
     <div class="product_pic">
-        <img src="{{ asset('storage/'.$furniture->image_path)}}" alt="{{$furniture->name }}">
+      <img src="{{ asset('storage/'.$furniture->image_path)}}" alt="{{$furniture->name }}">
       </div>
 
       <div class="detail_contents">

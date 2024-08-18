@@ -11,7 +11,7 @@
 @section('contents')
 <main id="create" class="wrapper">
   <h1>新規登録画面</h1>
-    <form method="POST" action="{{ route('furniture.store') }}">
+  <form action="{{ route('furniture.store') }}" method="POST">
       @csrf
       <div class="top_contents">
         <table>
@@ -46,7 +46,7 @@
         </table>
       </div>
       <div class="create_btn">
-        <a href="{{ route('furniture.store')}}">新規登録</a>
+        <input type="submit">新規登録</input>
       </div>
 </main>
 @endsection

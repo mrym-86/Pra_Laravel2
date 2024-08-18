@@ -49,19 +49,18 @@ class FurnitureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         $furniture = new Furniture ;
+        $file_path = "images/" . $request -> image_path ;
 
         $furniture -> name = $request -> name;
         $furniture -> price = $request -> price;
         $furniture -> details = $request -> details;
         $furniture -> color = $request -> color;
         $furniture -> material = $request -> material;
-        $furniture -> image_path = $request -> image_path;
-
-        /*$furniture ->save();*/
-
-        $registerFurniture = $this->furniture->InsertFurniture($request);
+        $furniture -> image_path = $file_path;
+        
+        $furniture ->save();
 
         return redirect()->route('furniture.index');
         
@@ -72,6 +71,7 @@ class FurnitureController extends Controller
      */
     public function show($id)
     {
+
         $furniture = Furniture::find($id);
 
         return view('details',compact('furniture'));

@@ -24,7 +24,6 @@ class furniture extends Model
             'name' -> $request -> name,
             'price' -> $request -> price,
             'details' -> $request -> details,
-            'image' -> $request -> image,
             'color' -> $request -> color,
             'material' -> $request -> material,
             'image_path' -> $request ->image_path
