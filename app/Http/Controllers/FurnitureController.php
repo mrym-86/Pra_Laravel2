@@ -38,11 +38,10 @@ class FurnitureController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
         //
         return view('create');
-
     }
 
     /**
@@ -51,6 +50,21 @@ class FurnitureController extends Controller
     public function store(Request $request)
     {
         //
+        $furniture = new Furniture ;
+
+        $furniture -> name = $request -> name;
+        $furniture -> price = $request -> price;
+        $furniture -> details = $request -> details;
+        $furniture -> color = $request -> color;
+        $furniture -> material = $request -> material;
+        $furniture -> image_path = $request -> image_path;
+
+        /*$furniture ->save();*/
+
+        $registerFurniture = $this->furniture->InsertFurniture($request);
+
+        return redirect()->route('furniture.index');
+        
     }
 
     /**
@@ -66,7 +80,7 @@ class FurnitureController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(furniture $furniture)
+    public function edit()
     {
         //
         return view('edit');

@@ -72,6 +72,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/furniture/create',[FurnitureController::class, 'create'])->name('furniture.create');
 
+    /*Route::get('/furniture/store',[FurnitureController::class, 'store'])->name('furniture.store');*/
+    Route::post('/furniture/store',[FurnitureController::class, 'store'])->name('furniture.store');
+
     Route::get('/furniture/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
 
     Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.show');
