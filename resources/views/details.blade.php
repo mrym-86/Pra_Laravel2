@@ -10,10 +10,11 @@
 
 @section('contents')
   <main id="details" class="wrapper">
-    <div class="contents">
-      <div class="product_pic">
-        <img src="{{ asset( $furniture->image_path)}}" alt="{{$furniture->name }}">
+    <div class="contents">  
+    <div class="product_pic">
+      <img src="{{ asset('storage/'.$furniture->image_path)}}" alt="{{$furniture->name }}">
       </div>
+
       <div class="detail_contents">
         <div class="product_details">
           <h1>商品詳細</h1>
@@ -53,10 +54,6 @@
                 <button type="submit" class="btn btn-danger">削除</button>
               </form>
             </div>            
-              <!--<div class="delete-button">
-                <a href="{{ route('furniture.destroy',[$furniture->id])}}">削除</a>
-              </div>
-              --> 
           @endif
           <div class="return-button">
             <a href="{{ route('furniture.index')}}">戻る</a>
