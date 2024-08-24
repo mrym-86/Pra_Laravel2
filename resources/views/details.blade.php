@@ -19,17 +19,17 @@
         <div class="product_details">
           <h1>商品詳細</h1>
           <table>
-            <tr>
-              <th>コメント</th>
-              <td>{{$furniture->details }}</td>
+          <tr>
+              <th>商品名</th>
+              <td>{{$furniture->name }}</td>
             </tr>
             <tr>
-              <th>値段</th>
+              <th>価格</th>
               <td>{{$furniture->price }} 円 </td>
             </tr>
             <tr>
-              <th>サイズ</th>
-              <td>{{$furniture->size }}</td>
+              <th>コメント</th>
+              <td>{{$furniture->details }}</td>
             </tr>
             <tr>
               <th>色</th>
@@ -43,16 +43,18 @@
         </div>
         <div class="button">
           @if(Auth::user()-> admin == 1)
-            <div class="edit-button">
-              <a href="{{ route('furniture.edit')}}">編集</a>
-            </div>
+          <div class="edit_button">
+            <form action="{{route('furniture.edit',[$furniture->id])}}" method="GET">
+            <button type="submit" >編集</button>
+            </form>
+          </div>
             
-            <div class="delete-button">
-              <form action="{{route('furniture.destroy',[$furniture->id])}}" method="POST" onsubmit="return confirm('本当に削除しますか？');">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">削除</button>
-              </form>
+          <div class="delete_button">
+            <form action="{{route('furniture.destroy',[$furniture->id])}}" method="POST" onsubmit="return confirm('本当に削除しますか？');">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">削除</button>
+            </form>
             </div>            
           @endif
           <div class="return-button">

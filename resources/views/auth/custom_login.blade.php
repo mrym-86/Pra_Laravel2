@@ -28,10 +28,6 @@
           <label for="password" value="___('Password')">パスワード</label>
           <input type="password" name="password" id="password" value="{{ old('password')}}" required>
         </div>
-        <!--<div class="form-group">
-          <label for="checkbox" value="___('Checkbox')">あなたは管理者ですか？</label>
-          <input type="checkbox" name="admin" id="admin" value="{{ old('admin')}}" required>
-        </div>-->
         <div class="login-button">
           <button type="submit">{{ __('ログイン') }}</button>
         </div>
