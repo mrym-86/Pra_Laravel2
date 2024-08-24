@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\furniture;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\UpdatePostRequest;
 
 class FurnitureController extends Controller
 {
@@ -92,22 +93,16 @@ class FurnitureController extends Controller
     /**
      * 登録商品の編集処理
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        //入力内容のバリデーション
-        $request->validate([
-            'name' => ['required','max:10'],
-            'price' => ['required','max:10'],
-        ]);
-
         //商品データの更新
         $furniture = Furniture::findOrFail($id);
         $furniture->name = $request->input('name');
         $furniture->price = $request->input('price');
         $furniture->save();
 
-        //更新後のページにリダイレクト
-        return redirect()->route('furniture.index')->with('success','商品情報が更新されました');
+        //更新後、一覧ページにリダイレクト
+        return redirect()->route('furniture.index');
         
     }
 

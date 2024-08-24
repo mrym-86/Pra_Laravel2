@@ -33,7 +33,7 @@
               <label for="price">価格</label>
             </td>
             <td>
-              <input type="integer" id="price" name="price" value="{{old('name',$furniture->price)}}">
+              <input type="integer" id="price" name="price" value="{{old('price',$furniture->price)}}">
             </td>
           </tr>
           <tr>
@@ -41,7 +41,7 @@
               <label for="details">コメント</label>
             </td>
             <td>
-              <input type="text" id="details" name="details" value="{{old('name',$furniture->details)}}">
+              <input type="text" id="details" name="details" value="{{old('details',$furniture->details)}}">
             </td>
           </tr>          
           <tr>
@@ -49,7 +49,7 @@
               <label for="color">色</label>
             </td>
             <td>
-              <input type="string" id="color" name="color" value="{{old('name',$furniture->color)}}">
+              <input type="string" id="color" name="color" value="{{old('color',$furniture->color)}}">
             </td>
           </tr>
           <tr>
@@ -57,7 +57,7 @@
               <label for="material">素材</label>
             </td>
             <td>
-              <input type="string" id="material" name="material" value="{{old('name',$furniture->material)}}">
+              <input type="string" id="material" name="material" value="{{old('material',$furniture->material)}}">
             </td>
           </tr>
         </table>
