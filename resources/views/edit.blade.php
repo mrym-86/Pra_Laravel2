@@ -60,6 +60,14 @@
               <input type="string" id="material" name="material" value="{{old('material',$furniture->material)}}">
             </td>
           </tr>
+          <tr>
+            <td>
+              <label for="details">画像</label>
+            </td>
+            <td>
+              <input type="file" id="image_path" name="image_path" value="{{old('image_path',$furniture->image_path)}}">
+            </td>
+          </tr>
         </table>
       </div>
       <div class="edit_btn">

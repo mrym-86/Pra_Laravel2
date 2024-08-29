@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePostRequest extends FormRequest
+class FurnitureRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +23,8 @@ class StorePostRequest extends FormRequest
     {
         return [
             'name' =>['required','string','max:10'],
-            'price' =>['required','integer','max:10'],
-            'details' =>['required','text','max:10'],
+            'price' =>['required','string','max:10'],
+            'details' =>['required','string','max:10'],
             'color' =>['required','string','max:10'],
             'material' =>['required','string','max:10'],
         ];

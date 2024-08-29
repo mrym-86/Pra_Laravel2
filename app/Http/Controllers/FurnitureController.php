@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Models\furniture;
 use Illuminate\Http\Request;
-use App\Http\Requests\StorePostRequest;
-use App\Http\Requests\UpdatePostRequest;
+use App\Http\Requests\FurnitureRequest;
+
 
 class FurnitureController extends Controller
 {
@@ -52,7 +52,7 @@ class FurnitureController extends Controller
     /**
      * 商品の新規登録処理
      */
-    public function store(StorePostRequest $request)
+    public function store(FurnitureRequest $request)
     {
         $furniture = new Furniture ;
         $file_path = "images/" . $request -> image_path ;
@@ -93,7 +93,7 @@ class FurnitureController extends Controller
     /**
      * 登録商品の編集処理
      */
-    public function update(Request $request,$id)
+    public function update(FurnitureRequest $request,$id)
     {
         //商品データの更新
         $furniture = Furniture::findOrFail($id);
