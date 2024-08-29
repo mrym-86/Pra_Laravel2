@@ -74,9 +74,11 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/furniture/store',[FurnitureController::class, 'store'])->name('furniture.store');
 
-    Route::get('/furniture/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
+    Route::get('/furniture/{id}/show',[FurnitureController::class,'show'])->name('furniture.show');
 
-    Route::get('/furniture/{id}',[FurnitureController::class,'show'])->name('furniture.show');
+    Route::get('/furniture/{id}/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
 
-    Route::post('/furniture/{id}',[FurnitureController::class,'destroy'])->name('furniture.destroy');
+    Route::post('/furniture/{id}/update',[FurnitureController::class, 'update'])->name('furniture.update');
+
+    Route::delete('/furniture/{id}/destroy',[FurnitureController::class,'destroy'])->name('furniture.destroy');
 });

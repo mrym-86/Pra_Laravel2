@@ -32,8 +32,6 @@ class AuthenticatedSessionController extends Controller
             'password' => 'required | max:50' ,
         ]);
 
-        
-
         $request->authenticate();
 
         $request->session()->regenerate();

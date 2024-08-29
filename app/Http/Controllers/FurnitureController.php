@@ -5,30 +5,35 @@ namespace App\Http\Controllers;
 
 use App\Models\furniture;
 use Illuminate\Http\Request;
+use App\Http\Requests\FurnitureRequest;
+
 
 class FurnitureController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 一覧画面への遷移
      */
     public function index()
     {
         // 変数名はスネークケース
-        // dd('indexは飛んでる');
         $furnitures = furniture::all();
         // コントローラ=>viewに変数を渡したいときはcompactを使用
         return view('index', compact('furnitures'));
     }
 
+
+    /**
+     * サイト概要画面への遷移
+     */
     public function about()
     {
-        // dd('about確認');
-
         return view('about');
-        //return view('about');
-
     }
 
+
+    /**
+     * 会社概要画面への遷移
+     */
     public function company()
     {
         return view('company');
@@ -36,20 +41,19 @@ class FurnitureController extends Controller
 
 
     /**
-     * Show the form for creating a new resource.
+     * 新規登録画面への画面遷移
      */
     public function create(Request $request)
     {
-        //
         return view('create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
 
+    /**
+     * 商品の新規登録処理
+     */
+    public function store(FurnitureRequest $request)
+    {
         $furniture = new Furniture ;
         $file_path = "images/" . $request -> image_path ;
 
@@ -63,43 +67,50 @@ class FurnitureController extends Controller
         $furniture ->save();
 
         return redirect()->route('furniture.index');
+    }
+
+
+    /**
+     * 詳細画面への遷移
+     */
+    public function show($id)
+    {
+        $furniture = Furniture::find($id);
+        return view('details',compact('furniture'));
+    }
+
+
+    /**
+     * 商品の登録内容編集画面へ遷移
+     */
+    public function edit($id)
+    {
+        $furniture = Furniture::find($id);
+        return view('edit',compact('furniture'));
+    }
+
+
+    /**
+     * 登録商品の編集処理
+     */
+    public function update(FurnitureRequest $request,$id)
+    {
+        //商品データの更新
+        $furniture = Furniture::findOrFail($id);
+        $furniture->name = $request->input('name');
+        $furniture->price = $request->input('price');
+        $furniture->save();
+
+        //更新後、一覧ページにリダイレクト
+        return redirect()->route('furniture.index');
         
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show($id)
-    {
-
-        $furniture = Furniture::find($id);
-
-        return view('details',compact('furniture'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit()
-    {
-        //
-        return view('edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, furniture $furniture)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
+     * 登録商品の削除処理
      */
     public function destroy($id)
     {
-        //
         $furniture = Furniture::find($id);
 
         $furniture->delete();

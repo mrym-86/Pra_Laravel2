@@ -22,22 +22,47 @@
           <tr>
             <td>商品名</td>
             <td><input type="text" name = "name" required></td>
+            @error('name')
+            <td>
+              <div class="error_message" style="color:red">入力内容が正しくありません</div>
+            </td>
+            @enderror
           </tr>
           <tr>
             <td>価格</td>
             <td><input type="text" name = "price" required></td>
+            @error('price')
+            <td>
+            <div class="error_message" style="color:red">入力内容が正しくありません</div>
+            </td>
+            @enderror
           </tr>
           <tr>
             <td>コメント</td>
             <td><input type="textarea" name = "details" required></td>
+            @error('details')
+            <td>
+            <div class="error_message" style="color:red">入力内容が正しくありません</div>
+            </td>
+            @enderror
           </tr>
           <tr>
             <td>色</td>
             <td><input type="text" name = "color" required></td>
+            @error('color')
+            <td>
+            <div class="error_message" style="color:red">入力内容が正しくありません</div>
+            </td>
+            @enderror
           </tr>
           <tr>
             <td>素材</td>
             <td><input type="text" name = "material" required></td>
+            @error('material')
+            <td>
+            <div class="error_message" style="color:red">入力内容が正しくありません</div>
+            </td>
+            @enderror
           </tr>
           <tr>
             <td>写真</td>
@@ -46,7 +71,7 @@
         </table>
       </div>
       <div class="create_btn">
-        <input type="submit">新規登録</input>
+        <input type="submit" value="新規登録"></input>
       </div>
 </main>
 @endsection

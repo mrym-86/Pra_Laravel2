@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('furitures', function (Blueprint $table) {
+        Schema::table('furnitures', function (Blueprint $table) {
             //
             $table->renameColumn('image_path','image');
         });
@@ -22,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('furitures', function (Blueprint $table) {
+        Schema::table('furnitures', function (Blueprint $table) {
             //
         });
     }
