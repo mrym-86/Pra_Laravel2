@@ -77,7 +77,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/furniture/{id}/show',[FurnitureController::class,'show'])->name('furniture.show');
 
     Route::get('/furniture/{id}/edit',[FurnitureController::class, 'edit'])->name('furniture.edit');
-
+    
     Route::post('/furniture/{id}/update',[FurnitureController::class, 'update'])->name('furniture.update');
 
     Route::delete('/furniture/{id}/destroy',[FurnitureController::class,'destroy'])->name('furniture.destroy');
