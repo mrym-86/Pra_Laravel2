@@ -1,5 +1,8 @@
 /*入力箇所とボタンの幅が合わない*/
 
+body{
+  background-color :#ebebeb;
+}
 
 .login-container{
   max-width:960px;
@@ -7,19 +10,20 @@
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  width:600px;
-  height:350px;
-  background-color: darksalmon;
+  width:800px;
+  height:500px;
+  background-color: rgb(255, 255, 255);
   justify-content: space-between;
-  border-radius:5px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1); 
+  border-radius:10px;
+  box-shadow:10px 10px 20px 10px  rgba(0, 0, 0, 0.3); 
   margin:auto;
 }
 
+
 .container{
-  margin:20px auto 20px auto;
-  width:550px;
-  height:300px;
+  margin:80px auto 80px auto;
+  width:600px;
+  height:400px;
 }
 
 .form-group{
@@ -57,13 +61,24 @@ button[type="submit"]{
   cursor:pointer;
 }
 
+
+
 @media (max-width:600px){
   .login-container{
+    min-width:400px;
+    position:absolute;
+      top:10%;
+      left:10%;
     width:80%;
+    
   }
 
   .container{
+    min-width:400px;
     width:80%;
+    
   }
 
 }
+
+
