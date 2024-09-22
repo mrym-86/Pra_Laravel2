@@ -27,6 +27,7 @@ class FurnitureController extends Controller
      */
     public function about()
     {
+        // about画面へ遷移
         return view('about');
     }
 
@@ -36,6 +37,7 @@ class FurnitureController extends Controller
      */
     public function company()
     {
+        // company画面へ遷移
         return view('company');
     }
 
@@ -45,6 +47,7 @@ class FurnitureController extends Controller
      */
     public function create(Request $request)
     {
+        //create画面への遷移
         return view('create');
     }
 
@@ -55,6 +58,7 @@ class FurnitureController extends Controller
     public function store(FurnitureRequest $request)
     {
         $furniture = new Furniture ;
+        // 入力されたファイル名をファイルの格納先(パス)へ変更
         $file_path = "images/" . $request -> image_path ;
 
         $furniture -> name = $request -> name;
@@ -64,8 +68,10 @@ class FurnitureController extends Controller
         $furniture -> material = $request -> material;
         $furniture -> image_path = $file_path;
         
+        // 入力データを保存
         $furniture ->save();
 
+        //TOPページへリダイレクト
         return redirect()->route('furniture.index');
     }
 
@@ -75,6 +81,7 @@ class FurnitureController extends Controller
      */
     public function show($id)
     {
+        // 選択した商品の詳細ページへ遷移
         $furniture = Furniture::find($id);
         return view('details',compact('furniture'));
     }
@@ -85,11 +92,12 @@ class FurnitureController extends Controller
      */
     public function edit($id)
     {
+        // 選択した商品の編集ページへ遷移
         $furniture = Furniture::find($id);
         return view('edit',compact('furniture'));
     }
 
-
+    
     /**
      * 登録商品の編集処理
      */
@@ -97,8 +105,16 @@ class FurnitureController extends Controller
     {
         //商品データの更新
         $furniture = Furniture::findOrFail($id);
+
         $furniture->name = $request->input('name');
         $furniture->price = $request->input('price');
+        $furniture->details = $request->input('details');
+        $furniture -> color = $request -> input('color');
+        $furniture -> material = $request -> input('material');
+
+        $file_path = "images/" . $request -> input('image_path') ;
+        $furniture -> image_path = $file_path;
+
         $furniture->save();
 
         //更新後、一覧ページにリダイレクト
@@ -113,8 +129,10 @@ class FurnitureController extends Controller
     {
         $furniture = Furniture::find($id);
 
+        //選択した商品情報を削除
         $furniture->delete();
 
+        //TOPページへリダイレクト
         return redirect()->route('furniture.index');
     }
 }

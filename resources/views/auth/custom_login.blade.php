@@ -10,8 +10,8 @@
 
 <body>
   <div class ="login-container">
-    <div class="container">
-      <h1>ログイン</h1>
+    <div class =container>
+      <h2>会員の方</h2>
       <form method="POST" action="{{ route('login') }}">
         @csrf
         <div class="form-group">
@@ -27,6 +27,10 @@
           @enderror
           <label for="password" value="___('Password')">パスワード</label>
           <input type="password" name="password" id="password" value="{{ old('password')}}" required>
+        </div>
+
+        <div class="register-button">
+          <p>※会員でない方は<a>こちら</a>から登録</p>
         </div>
         <div class="login-button">
           <button type="submit">{{ __('ログイン') }}</button>
