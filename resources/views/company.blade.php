@@ -1,13 +1,18 @@
 @extends('layout')
 
+@section('css')
+<link href="{{ asset('/assets/css/company.css') }}" rel="stylesheet">
+@endsection
+
 @section('title')
   COMPANY
 @endsection
 
 @section('contents')
 <main id="company" class="wrapper">
+  <div class="company_page">
     <div class="page_title">
-      <p>Company</p>
+      <h1>Company</h1>
     </div>
 
     <div class="com_about">
@@ -36,4 +41,5 @@
     <div class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2914385368663!2d139.72304042623082!3d35.669825280599774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c820ac932eb%3A0xc68079dd10afd971!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1706413694490!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+  </div>
 @endsection

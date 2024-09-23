@@ -1,13 +1,18 @@
 /*top*/
 #top{
-  margin-bottom:160px;
+  margin-bottom:80px;
 }
 
 .top_contents{
-  padding-top:80px;
+  padding-top:100px;
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
+}
+
+.top_contents h1{
+  font-size:30px;
+  margin-bottom:30px;
 }
 
 .create_btn{

@@ -11,6 +11,7 @@
 @section('contents')
 <main id="top" class="wrapper">
     <div class="top_contents">
+      <h1>Products</h1>
       @if(Auth::user()->admin == 1)
         <a class="create_btn" href="{{ route('furniture.create')}}">新規登録</a>
       @endif
@@ -28,8 +29,5 @@
         @endforeach
       </div>
     </div>
-
-      
-
 </main>
 @endsection
