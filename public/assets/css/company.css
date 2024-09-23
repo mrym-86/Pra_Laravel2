@@ -1,0 +1,10 @@
+.company_page{
+  max-width:960px;
+  padding-top:100px;
+  padding-bottom:80px;
+}
+
+.company_page h1{
+  font-size:30px;
+  margin-bottom:30px;
+}
