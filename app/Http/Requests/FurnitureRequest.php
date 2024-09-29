@@ -22,13 +22,12 @@ class FurnitureRequest extends FormRequest
      */
     public function rules(): array
     {
-        dd('編集');
         return [
-            'name' =>['required','string','max:10'],
-            'price' =>['required','integer','max:10'],
-            'details' =>['required','string','max:50'],
-            'color' =>['required','string','max:10'],
-            'material' =>['required','string','max:10'],
+            'name' =>['required','string','max:255'],
+            'price' =>['required','integer','max:9999999'],
+            'details' =>['required','string','max:255'],
+            'color' =>['required','string','max:255'],
+            'material' =>['required','string','max:255'],
         ];
         
     }

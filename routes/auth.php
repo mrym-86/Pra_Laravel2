@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
     /*Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');*/
 
-    Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+    Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
 
     // 転記
