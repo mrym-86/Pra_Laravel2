@@ -1,10 +1,39 @@
 .company_page{
-  max-width:960px;
+  max-width:1200px;
   padding-top:100px;
   padding-bottom:80px;
 }
 
+.com_about{
+  padding-bottom:50px;
+}
+
 .company_page h1{
   font-size:30px;
-  margin-bottom:30px;
+  margin-bottom:40px;
+}
+
+.com_about dt{
+  font-size:20px;
+  font-weight: bold;
+  margin-bottom:20px;
+}
+
+.com_about dd{
+  font-size:17px;
+  margin-bottom:40px;
+}
+
+.map{
+  width:600px;
+}
+
+.map iframe{
+  width:100%;
+}
+
+@media (max-width:600px){
+  .map{
+    width:80%;
+  }
 }

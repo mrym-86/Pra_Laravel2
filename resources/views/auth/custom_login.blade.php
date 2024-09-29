@@ -30,7 +30,7 @@
         </div>
 
         <div class="register-button">
-          <p>※会員でない方は<a>こちら</a>から登録</p>
+          <p>※会員でない方は<a href="{{ route('register')}}">こちら</a>から登録</p>
         </div>
         <div class="login-button">
           <button type="submit">{{ __('ログイン') }}</button>
