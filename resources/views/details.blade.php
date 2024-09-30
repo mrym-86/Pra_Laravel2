@@ -25,7 +25,7 @@
             </tr>
             <tr>
               <th>価格</th>
-              <td>{{$furniture->price }} 円 </td>
+              <td>{{number_format($furniture->price)}} 円 </td>
             </tr>
             <tr>
               <th>コメント</th>
