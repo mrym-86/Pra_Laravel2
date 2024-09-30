@@ -24,7 +24,7 @@
             </a>
 
             <p>NAME:{{$furniture->name}}</p>
-            <p>PRICE:{{$furniture->price}}</p>
+            <p>PRICE:{{number_format($furniture->price)}}</p>
           </div>
         @endforeach
       </div>
