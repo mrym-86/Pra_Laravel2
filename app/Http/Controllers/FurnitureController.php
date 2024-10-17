@@ -25,10 +25,10 @@ class FurnitureController extends Controller
     /**
      * サイト概要画面への遷移
      */
-    public function about()
+    public function vision()
     {
-        // about画面へ遷移
-        return view('about');
+        // vision画面へ遷移
+        return view('vision');
     }
 
 
