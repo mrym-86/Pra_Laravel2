@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\FurnitureController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Auth\RegisteredUserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,13 @@ Route::get('/login',function(){
 })->name('login');
 
 Route::post('/login',[AuthenticatedSessionController::class,'store']);
+
+/*新規登録追記*/
+Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->name('register');
+
+Route::post('/register', [RegisteredUserController::class, 'store']);
+/*新規登録追記*/
 
 Route::get('/dashboard', function () {
     return view('dashboard');

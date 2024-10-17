@@ -1,26 +1,26 @@
 @extends('layout')
 
 @section('css')
-<link href="{{ asset('/assets/css/about.css') }}" rel="stylesheet">
+<link href="{{ asset('/assets/css/vision.css') }}" rel="stylesheet">
 @endsection
 
 @section('title')
-  ABOUT
+  VISION
 @endsection
 
 @section('contents')
-<main id="about" class="wrapper">
-  <div class="about_page">
+<main id="vision" class="wrapper">
+  <div class="vision_page">
       <div class ="page_title">
-        <h1>About</h1>
+        <h1>Vision</h1>
       </div>
 
-      <div class="about_content"> 
-        <div class ="about_pic">
-          <img src="{{asset('images/about_pic.jpg')}}" alt="会社イメージ画像">
+      <div class="vision_content"> 
+        <div class ="vision_pic">
+          <img src="{{asset('images/vision_pic.jpg')}}" alt="会社イメージ画像">
         </div>
         
-        <div class="about_text">
+        <div class="vision_text">
           <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
           <br>
           <br>

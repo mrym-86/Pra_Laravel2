@@ -1,4 +1,4 @@
-.about_page{
+.vision_page{
   max-width:1200px;
   padding-top:100px;
   padding-bottom:80px;
@@ -12,16 +12,16 @@
   margin-bottom:30px;
 }
 
-.about_content{
+.vision_content{
   display:flex;
   justify-content:space-between;
 }
 
-.about_pic{
+.vision_pic{
   padding-left:30px;
 }
 
-.about_text{
+.vision_text{
   font-size:17px;
   line-height:1.5;
   padding-left:50px;
@@ -36,7 +36,7 @@
 }
 
 @media (max-width:600px){
-  .about_pic{
+  .vision_pic{
     display:none;
   }
 }

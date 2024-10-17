@@ -11,7 +11,7 @@
   <div class="register_container">
     <div class="container">
       <h2>ユーザー登録</h2>
-        <form method="POST" action="{{ route('register')}}">
+        <form method="POST" action="{{ route('register.store') }}">
           @csrf
             <div class="form-group">
               <label for="name" value="__('Name')">名前</label>
@@ -30,8 +30,8 @@
 
             <div class="form-group">
               <label for="admin" value="__('Admin')">あなたは管理者ですか？</label>
-              
-              <input type="checkbox" name="admin" id="admin" value="{{old('admin')}}" >
+              <input type="hidden" name="admin" id="admin" value=0 >
+              <input type="checkbox" name="admin" id="admin" value=1 >
             </div>
 
             <div class="form-group">

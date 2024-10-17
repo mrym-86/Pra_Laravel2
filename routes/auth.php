@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 /*use App\Http\Controllers\FurnitureController;*/
 
 Route::middleware('guest')->group(function () {
-    Route::get('register', [RegisteredUserController::class, 'create'])
-                ->name('register');
+    Route::get('/register', [RegisteredUserController::class, 'create'])
+                ->name('register.create');
 
-    Route::post('register', [RegisteredUserController::class, 'store']);
+    Route::post('/register', [RegisteredUserController::class, 'store'])
+                ->name('register.store');
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
@@ -66,7 +67,7 @@ Route::middleware('auth')->group(function () {
     // 転記
     Route::get('/furniture',[FurnitureController::class, 'index'])->name('furniture.index');
 
-    Route::get('/furniture/about',[FurnitureController::class, 'about'])->name('furniture.about');
+    Route::get('/furniture/vision',[FurnitureController::class, 'vision'])->name('furniture.vision');
 
     Route::get('/furniture/company',[FurnitureController::class, 'company'])->name('furniture.company');
 

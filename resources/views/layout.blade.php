@@ -13,14 +13,14 @@
   <body>
     <header id="header" class="wrapper">
       <div class="title_logo">
-        <a href="{{ route('furniture.index')}}">furniture Design</a>
+        <a href="{{ route('furniture.index')}}">Furniture Design</a>
       </div>
 
       <div class="header_menu">
         <nav id="menu_nav">
           <ul>
             <li><a href="{{ route('furniture.index')}}"> PRODUCTS</a></li>
-            <li><a href="{{ route('furniture.about')}}">ABOUT</a></li>
+            <li><a href="{{ route('furniture.vision')}}">VISION</a></li>
             <li><a href="{{ route('furniture.company')}}">COMPANY</a></li>
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeumVBPJNY9AE_IB7rnfCIraHnT9MJJpFi4p_JTun8bywYr0Q/viewform?usp=sf_link">CONTACT</a></li>
             <li>
