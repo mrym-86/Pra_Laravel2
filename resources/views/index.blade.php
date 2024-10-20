@@ -15,6 +15,7 @@
       @if(Auth::user()->admin == 1)
         <a class="create_btn" href="{{ route('furniture.create')}}">新規登録</a>
       @endif
+    </div>
 
       <div class="grid_container">
         @foreach($furnitures as $furniture)
@@ -28,6 +29,6 @@
           </div>
         @endforeach
       </div>
-    </div>
+    
 </main>
 @endsection
