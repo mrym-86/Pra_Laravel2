@@ -41,8 +41,33 @@
   width:70%;
   display:flex;
   justify-content: space-between;
-  padding-top:100px;  
+  padding-top:100px;
 }
+
+.edit_button button{
+  background-color: white;
+  border:none;
+  font-size:16px;
+  cursor: pointer;
+}
+
+.delete_button button{
+  background-color: white;
+  border:none;
+  font-size:16px;
+  cursor: pointer;
+}
+
+.edit_button button:hover{
+  color:#333333;
+  opacity:0.7;
+}
+
+.delete_button button:hover{
+  color:#333333;
+  opacity:0.7;
+}
+
 
 /*
 @media (max-width:600px){

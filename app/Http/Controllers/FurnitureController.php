@@ -58,9 +58,15 @@ class FurnitureController extends Controller
     public function store(FurnitureRequest $request)
     {
         $furniture = new Furniture ;
+        
         // 入力されたファイル名をファイルの格納先(パス)へ変更
-        $file_path = "images/" . $request -> image_path ;
-
+        if($request->hasFile('image_path')){
+            $file_path = "images/" . $request -> image_path ;
+        } else {
+            //画像がない場合、noimage.png を自動挿入する
+            $file_path = 'images/noimage.png';
+        }
+        
         $furniture -> name = $request -> name;
         $furniture -> price = $request -> price;
         $furniture -> details = $request -> details;
