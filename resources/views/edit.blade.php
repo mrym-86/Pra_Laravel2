@@ -70,8 +70,13 @@
           </tr>
         </table>
       </div>
-      <div class="edit_btn">
-        <input type="submit" value="変更"></input>
+      <div class="btn">
+        <div class="edit_button">
+          <button type="submit">変更</button>
+        </div>
+        <div class="return-button">
+          <a href="{{ route('furniture.index')}}">戻る</a>
+        </div>
       </div>
     </form>
 </main>

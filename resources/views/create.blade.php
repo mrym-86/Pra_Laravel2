@@ -66,7 +66,7 @@
           </tr>
           <tr>
             <td>写真</td>
-            <td><input type="file" name = "image_path" required></td>
+            <td><input type="file" name = "image_path"></td>
           </tr>
         </table>
       </div>

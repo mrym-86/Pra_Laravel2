@@ -30,8 +30,8 @@
 
             <div class="form-group">
               <label for="admin" value="__('Admin')">あなたは管理者ですか？</label>
-              <input type="hidden" name="admin" id="admin" value=0 >
-              <input type="checkbox" name="admin" id="admin" value=1 >
+              <input type="hidden" name="admin" id="admin" value= 0 >
+              <input type="checkbox" name="admin" id="admin" value= 1 >
             </div>
 
             <div class="form-group">
